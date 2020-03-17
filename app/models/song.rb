@@ -1,13 +1,13 @@
 class Song < ApplicationRecord
-  validates :song, presence: true
-  validates :released, inclusive: { in: %w(true false)}
-  validates :release_year, presence: true if: :released?
-  validates :release_year, numerically: { less_than_or_equal_to: :current_year }
+  validates :title, presence: true
+  validates :released, inclusion: { in: %w(true false)}
+  validates :release_year, presence: true, if: :released?
+  validates :release_year, numericality: { less_than_or_equal_to: :current_year }
   validates :artist_name, presence: true
   
   
   def released?
-    Song.released == true
+    released == true
   end 
   
   def not_released?
