@@ -1,0 +1,1 @@
+Song.create(title: "Thriller", released: true, release_year: 1982, artist_name: "Michael Jackson", genre: "Pop")

@@ -6,7 +6,6 @@ class SongsController < ApplicationController
   
   def show 
     @song = Song.find(params[:id])
-    redirect_to song_path(@song)
   end 
   
   def new 
@@ -34,12 +33,12 @@ class SongsController < ApplicationController
       redirect_to song_path(@song)
     else 
       render :edit
-    else
+    end
   end 
   
   def destroy
     @song = Song.find(params[:id]).destroy
-    redirect_to songs_path(@song)
+    redirect_to songs_path
   end 
   
   private
