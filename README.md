@@ -8,10 +8,10 @@ Your goal in this lab is to create a thorough CRUD interface for one model, the
 Songs have the following attributes and limitations:
 
 - `title`, a `string`
-  - Must not be blank
+  - Must not be blank -->
   - Cannot be repeated by the same artist in the same year
 - `released`, a `boolean` describing whether the song was ever officially
-  released.
+  released. -->
   - Must be `true` or `false`
 - `release_year`, an `integer`
   - Optional if `released` is `false`
